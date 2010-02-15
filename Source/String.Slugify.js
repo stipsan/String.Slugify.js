@@ -20,15 +20,10 @@ provides: [String.Slugify]
 ...
 */
 
-(function(){
-
 String.implement({
 
 	slugify: function(){
-		var txt = this.toString().tidy().standardize().replace(/\s+/g,'-').toLowerCase().replace(/[^a-z0-9\-]/g,'');
-		return txt;
+		return this.toString().tidy().standardize().replace(/\s+/g,'-').toLowerCase().replace(/[^a-z0-9\-]/g,'');
 	}
 
 });
-
-})();
