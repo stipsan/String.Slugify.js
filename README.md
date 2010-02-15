@@ -40,4 +40,4 @@ Screenshots
 -----------
 
 ![Screenshot](http://s3.amazonaws.com/ember/xwmVk5lxm01jNBFEMXgyCcpQYZTk54B9_o.png)
-![Screenshot](http://s3.amazonaws.com/ember/KwF9b2hWKfLa36MFoTWM2vxuJpCi4OB3_o.png)
+![Screenshot](http://s3.amazonaws.com/ember/RdbH0CLZgjeOMwb2n6YTJxOPnB9GVhtz_o.png)
