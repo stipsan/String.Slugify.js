@@ -11,7 +11,7 @@ How to Use
 String.Slugify extends the native String object, so it works on any ordinary string.
 
 	#JS
-	"slugify  ME    n%ø#w".slugify()
+	"slugify  ME    n%Ã¸#w".slugify()
 
 Returns "slugify-me-now"
 
