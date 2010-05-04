@@ -23,7 +23,7 @@ provides: [String.Slugify]
 String.implement({
 
 	slugify: function(){
-		return this.toString().tidy().standardize().replace(/\s+/g,'-').toLowerCase().replace(/[^a-z0-9\-]/g,'');
+		return this.toString().tidy().standardize().replace(/\s+/g,'-').toLowerCase().replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/[^a-z0-9\-]/g,'');
 	}
 
 });
