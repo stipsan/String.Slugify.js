@@ -7,7 +7,9 @@ description: Extends the String native object to have a slugify method, useful f
 
 license: MIT-style license
 
-authors: Stian Didriksen, Grzegorz Leoniec
+authors: 
+- Stian Didriksen
+- Grzegorz Leoniec
 
 requires:
 - core:1.2.4/String
