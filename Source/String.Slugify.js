@@ -7,7 +7,7 @@ description: Extends the String native object to have a slugify method, useful f
 
 license: MIT-style license
 
-authors: Stian Didriksen
+authors: Stian Didriksen, Grzegorz Leoniec
 
 requires:
 - core:1.2.4/String
@@ -20,10 +20,16 @@ provides: [String.Slugify]
 ...
 */
 
-String.implement({
-
-	slugify: function(){
-		return this.toString().tidy().standardize().replace(/\s+/g,'-').toLowerCase().replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/[^a-z0-9\-]/g,'');
-	}
-
-});
+(function()
+{
+	String.implement(
+	{
+		slugify: function( replace )
+		{
+			if( !replace ) replace = '-';
+			var str = this.toString().tidy().standardize().replace(/[\s\.]+/g,replace).toLowerCase().replace(new RegExp('[^a-z0-9'+replace+']','g'),replace).replace(new RegExp(replace+'+','g'),replace);
+			if( str.charAt(str.length-1) == replace ) str = str.substring(0,str.length-1);
+			return str;
+		}
+	});
+})();
