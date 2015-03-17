@@ -10,8 +10,9 @@ How to Use
 
 String.Slugify extends the native String object, so it works on any ordinary string.
 
-	#JS
-	"slugify  ME    n%ø#w".slugify()
+```javascript
+"slugify  ME    n%ø#w".slugify()
+```
 
 Returns "slugify-me-now"
 
@@ -24,7 +25,7 @@ The title field `<input id="title">`, and the slug `<input id="alias">`.
 
 We're listening to the `change` event on the slug input, and the `keyup` and `keydown` events additionally on the `<input id="title">` element; This is to make the `<input id="alias">` input update as you type the title and be slugified in the process:
 
-	#JS
+```javascript
 	var aliasvalidator = function(){
 		this.value = this.value.slugify();
 	};
@@ -34,7 +35,7 @@ We're listening to the `change` event on the slug input, and the `keyup` and `ke
 	
 	$('title').addEvents({'keyup': titlevalidator, 'keydown': titlevalidator, 'change': titlevalidator});
 	$('alias').addEvents({'change': aliasvalidator});
-	
+```
 
 Screenshots
 -----------
